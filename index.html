@@ -13,85 +13,75 @@
 
 <body>
 
-  <form class="row g-3 registration-Form" id="registration-form">
-    <h1 style="text-align:center" class="display-4"><span style="color:rgb(21, 18, 201)"><b>Registration Form
-        </b></span> </h1>
-
-    <!-- FULL NAME -->
-    <div class="col-md-12">
-      <label for="full-name" class="form-label"><b>Full name</b></label>
-      <input type="text" class="form-control" id="full-name" required autocomplete="off" onkeyup="validate()">
-      <div class="valid-feedback" id="full-name-valid">
-        Looks good!
-      </div>
-      <div class="invalid-feedback" id="full-name-invalid">
-        Please enter a valid Full Name.
-      </div>
-    </div>
-
-    <!-- GENDER -->
-    <div class="col-md-4">
-      <label for="gender" class="form-label"><b>Gender</b></label>
-      <select class="form-select" id="gender" required autocomplete="off" onchange="validate()">
-        <option value="None" selected>Choose</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Others">Other</option>
-      </select>
-      <div class="valid-feedback" id="gender-valid">
-        Looks good!
-      </div>
-      <div class="invalid-feedback" id="gender-invalid">
-        Please select the Gender.
-      </div>
-    </div>
-    
-    <!-- HOBBIES-->
-    <div class="col-md-3">
-      <label for="hobbies" class="form-lable"><b>Hobbies</b></label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" value="Swimming" id="Swimming" required
-          autocomplete="off" onchange="validate()">Swimming
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" value="Dancing" id="Dancing" required
-          autocomplete="off" onchange="validate()">Dancing
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" value="Singing" id="Singing" required
-          autocomplete="off" onchange="validate()">Singing
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" value="Reading Novels" id="ReadingNovels" 
-          required autocomplete="off" onchange="validate()">Reading Novels
-      </div>
-      <div class="valid-feedback" id="hobbies-valid">
-        Looks good!
-      </div>
-      <div class="invalid-feedback" id="hobbies-invalid">
-        Please Choose atleast one hobbies.
-      </div>
-    </div>
-    </div>
-
-    <!-- TnC -->
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="TnC" required autocomplete="off"
-          onchange="validate()">
-        <label class="form-check-label" for="TnC" id="TnC-valid">
-          <b>Agree to <span style="color:rgb(94, 132, 238)">Terms and conditions</b></span>
-        </label>
-        <div class="invalid-feedback" id="TnC-invalid">
-          You must agree before submitting.
+  <form class="row g-3 registration-form" id="registration-form">
+    <h1 style="text-align: center;" class="display-3">Registration Form</h1>
+    <hr class="hr1">
+    <div class="col-md-8">
+        <label for="full-name" class="form-label">Full name</label>
+        <input type="text" class="form-control" id="full-name" required autocomplete="off" onkeyup="validate()">
+        <div class="valid-feedback" id="full-name-valid">
+            Looks good!
         </div>
-      </div>
+        <div class="invalid-feedback" id="full-name-invalid">
+            Please enter a valid full name
+        </div>
     </div>
-    <div class="col-12" style="text-align: center;">
-      <button class="btn btn-dark" type="button" onclick="validate(true)">Submit form</button>
+    <div class="col-md-8">
+        <label for="gender" class="form-label">Gender</label>
+        <select class="form-select" id="gender" required onchange="validate()">
+            <option value="None" selected>Choose...</option>
+            <option value="MALE">MALE</option>
+            <option value="FEMALE">FEMALE</option>
+            <option value="OTHERS">OTHERS</option>
+        </select>
+        <div class="valid-feedback" id="gender-valid">
+            Looks good!
+        </div>
+
+        <div class="invalid-feedback" id="gender-invalid">
+            Please enter a valid gender
+        </div>
     </div>
-  </form>
-  <script src="script.js"></script>
+    <div class="col-md-8">
+        <label for="hobbies" class="form-label">Hobbies</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="swimming" required onchange="validate()">
+            <label class="form-check-label" for="hobbies"> 
+                Swimming
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="readingNovel" required onchange="validate()">
+            <label class="form-check-label" for="hobbies">
+                Reading Novels
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="dancing" required onchange="validate()">
+            <label class="form-check-label" for="hobbies">
+                Dancing
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="singing" required onchange="validate()">
+            <label class="form-check-label" for="hobbies">
+                Singing
+            </label>
+        </div>
+        <div class="valid-feedback" id="hobbies-valid">
+            Looks good!
+        </div>
+        <div class="invalid-feedback" id="hobbies-invalid">
+            Please select atleast one hobby
+        </div>
+    </div>
+    <div class="col-12" style="text-align: center;" >
+        <button class="btn btn-dark" type="button" id="btn" onclick="validate(true)">Submit form</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="style.js"></script>
 </body>
 
 </html>
